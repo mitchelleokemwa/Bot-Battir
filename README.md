@@ -137,3 +137,6 @@ As a user, I should be able to:
   `SortBar`.
 - Only enlist **one** bot from each `bot_class`. The classes are
   `["Support", "Medic", "Assault", "Defender", "Captain", "Witch"]`.
+
+<!-- Test Change -->
+<!-- This is the code on Github -->
