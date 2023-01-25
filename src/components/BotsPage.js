@@ -5,7 +5,7 @@ import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
 function BotsPage() {
-  //start here with your code for step one
+  
   const [bots, setBots] = useState([]);
   const [army, setArmy] = useState([]);
 
@@ -17,13 +17,13 @@ function BotsPage() {
     setArmy((army) => army.filter((it) => it.id !== bot.id));
   }
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("https://okemwa-bot-battlr.vercel.app/bots")
       .then((res) => res.json())
       .then((data) => setBots(data));
   }, []);
 
   function handleDelete(bot) {
-    fetch(`http://localhost:3000/bots/${bot.id}`, {
+    fetch(`https://okemwa-bot-battlr.vercel.app/bots/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setBots((bots) => bots.filter((it) => it.id !== bot.id));
@@ -36,7 +36,7 @@ function BotsPage() {
     <div>
       <YourBotArmy collection={army} clickHandler={retire} handleDelete={handleDelete} />
       <BotCollection collection={bots} clickHandler={enlist} handleDelete={handleDelete} />
-    </div>
+   </div>
   );
 }
 
