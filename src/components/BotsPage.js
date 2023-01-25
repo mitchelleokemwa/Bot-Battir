@@ -17,13 +17,13 @@ function BotsPage() {
     setArmy((army) => army.filter((it) => it.id !== bot.id));
   }
   useEffect(() => {
-    fetch("https://okemwa-bot-battlr.vercel.app/bots")
+    fetch("https://json-server-vercel-qt35-ba73tqk40-okemwamoraa9-gmailcom.vercel.app/bots")
       .then((res) => res.json())
       .then((data) => setBots(data));
   }, []);
 
   function handleDelete(bot) {
-    fetch(`https://okemwa-bot-battlr.vercel.app/bots/${bot.id}`, {
+    fetch(`https://json-server-vercel-qt35-ba73tqk40-okemwamoraa9-gmailcom.vercel.app/bots/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setBots((bots) => bots.filter((it) => it.id !== bot.id));
