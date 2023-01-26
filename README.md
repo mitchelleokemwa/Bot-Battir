@@ -12,17 +12,20 @@ Clone the repo by using the following command
 
 Change the directory by running the command:
 
-cd Bot-Battir
+    cd Bot-Battir
 
 Open project in your preferred code editor using the command:
 
-code .
+    code .
 
 # Technologies Used
 
 .React
+
 .Javascript
+
 .CSS
+
 .HTML
 
 # Author
