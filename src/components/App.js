@@ -1,11 +1,18 @@
-import React from "react";
-import BotsPage from "./BotsPage";
+import BotCollection from './BotCollection';
+import React from 'react';
+import NavBar from './Nav-Bar';
+// import YourBotArmy from './YourBotArmy';
+import '../components/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <BotsPage />
+    
+   <div> 
+    <NavBar/>
+
+    <BotCollection/>
     </div>
+
   );
 }
 
